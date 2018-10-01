@@ -119,5 +119,12 @@ class estimation:
         return H, detH, condH, detH0
 
 
-
-
+    def output_results(self, optmised):
+        """
+        Routine which writes out the result from optimisation
+        """
+        x = optmised.x
+        fun = optmised.fun
+        print '\n' + '<======== Optimised Results ========>'
+        print 'Optimised parameter: ' + str(x)
+        print 'Optimised obj. function: ' + str(fun)
